@@ -22,8 +22,8 @@ public class WithdrawlTest extends ProviderTest {
         Thread.sleep(5000);
         getDepositPage().setBtnDeposit();
         Thread.sleep(7000);
-        Thread.sleep(5000);
         amountBeforeAdd = getDepositPage().getBalance();
+        Thread.sleep(5000);
         getDepositPage().setInputAmount(deposit);
         Thread.sleep(5000);
         getDepositPage().setBtnSubmitDeposit();
