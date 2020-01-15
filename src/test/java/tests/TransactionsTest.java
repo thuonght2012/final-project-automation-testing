@@ -22,7 +22,6 @@ public class TransactionsTest extends ProviderTest {
         Thread.sleep(3000);
         getDepositPage().setBtnDeposit();
         Thread.sleep(7000);
-        Thread.sleep(5000);
         amountBeforeAdd= getDepositPage().getBalance();
         getDepositPage().setInputAmount(deposit);
         Thread.sleep(5000);

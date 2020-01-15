@@ -42,11 +42,5 @@ public class WithdrawlPage {
         } else System.out.println("The customer still has not withdrawn yet");
     }
 
-    public void verifyWithdrawlForm() {
-        if (checkForm.isDisplayed()) {
-            System.out.println("Deposit form is appeared ");
-        } else System.out.println("Deposit form is not appeared");
-    }
-
 
 }
