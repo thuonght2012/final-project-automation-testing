@@ -9,7 +9,7 @@ public class WithdrawlTest extends ProviderTest {
 
     @When("I login successfully with the account as (.*)")
     public void loginSuccess(String username) throws InterruptedException {
-        Thread.sleep(20000);
+        Thread.sleep(5000);
         getLoginPage().setBtnClickCustomerLogin();
         Thread.sleep(7000);
         getLoginPage().setUserSelect(username);
