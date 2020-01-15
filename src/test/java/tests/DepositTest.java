@@ -8,7 +8,7 @@ public class DepositTest extends ProviderTest {
     String amountBeforeAdd = "";
     @When("I login successfully with account as (.*)")
     public void loginSuccess(String username) throws InterruptedException {
-        Thread.sleep(20000);
+        Thread.sleep(5000);
         getLoginPage().setBtnClickCustomerLogin();
         Thread.sleep(7000);
         getLoginPage().setUserSelect(username);
