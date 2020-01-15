@@ -10,7 +10,7 @@ public class TransactionsTest extends ProviderTest {
     String dateTime = "";
     @When("I can login successfully with the account as (.*)")
     public void loginCustomer(String username) throws InterruptedException {
-        Thread.sleep(20000);
+        Thread.sleep(5000);
         getLoginPage().setBtnClickCustomerLogin();
         Thread.sleep(7000);
         getLoginPage().setUserSelect(username);
@@ -19,7 +19,7 @@ public class TransactionsTest extends ProviderTest {
     }
     @And("I deposited into account (.*)")
     public void deposit(String deposit) throws InterruptedException {
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         getDepositPage().setBtnDeposit();
         Thread.sleep(7000);
         amountBeforeAdd= getDepositPage().getBalance();
