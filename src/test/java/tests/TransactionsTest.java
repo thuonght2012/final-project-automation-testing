@@ -36,6 +36,7 @@ public class TransactionsTest extends ProviderTest {
     public void extraDeposit(String deposit) throws InterruptedException {
         Thread.sleep(5000);
         amountBeforeAdd= getDepositPage().getBalance();
+        Thread.sleep(5000);
         getDepositPage().setInputAmount(deposit);
         Thread.sleep(5000);
         getDepositPage().setBtnSubmitDeposit();
@@ -61,6 +62,7 @@ public class TransactionsTest extends ProviderTest {
     public void checkTable(String deposit) throws InterruptedException {
         Thread.sleep(5000);
         getTransactionsPage().verifyTable(deposit, dateTime);
+        Thread.sleep(5000);
         getTransactionsPage().clickDeleteButton();
     }
     @When("I click button Reset to delete all transactions")
