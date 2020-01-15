@@ -23,10 +23,11 @@ public class TransactionsTest extends ProviderTest {
         getDepositPage().setBtnDeposit();
         Thread.sleep(7000);
         amountBeforeAdd= getDepositPage().getBalance();
+        Thread.sleep(5000);
         getDepositPage().setInputAmount(deposit);
         Thread.sleep(5000);
         getDepositPage().setBtnSubmitDeposit();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         dateTime=getCommonPage().getDateTime();
         Thread.sleep(5000);
         getDepositPage().verifyAddDepositAmountSuccessfully(amountBeforeAdd, deposit);
@@ -53,33 +54,33 @@ public class TransactionsTest extends ProviderTest {
 
     @And("I click on Transactions button")
     public void clickBtnTransactions() throws InterruptedException {
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         getTransactionsPage().setBtnTransactions();
     }
     @Then("I verify table is appeared and show deposit success as (.*)")
     public void checkTable(String deposit) throws InterruptedException {
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         getTransactionsPage().verifyTable(deposit, dateTime);
         getTransactionsPage().clickDeleteButton();
     }
     @When("I click button Reset to delete all transactions")
     public void clickBtnReset() throws InterruptedException {
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         getTransactionsPage().setBtnReset();
     }
     @Then("I verify reset table successfully")
     public void verifyTableAfterReset() throws InterruptedException {
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         getTransactionsPage().verifyTableAfterReset();
     }
     @And("I click button Back to back Account page")
     public void setClickBtnBack() throws InterruptedException {
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         getTransactionsPage().setBtnBack();
     }
     @And("I verify balance amount and reset successfully")
     public void balance() throws InterruptedException {
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         getTransactionsPage().verifyBack();
     }
 }
